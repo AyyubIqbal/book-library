@@ -12,9 +12,15 @@ const loadData = () => {
 
 const displayData = (books) => {
     const searchResult = document.getElementById('search-result');
+    // clear previous result 
     searchResult.textContent = '';
-    console.log(books);
 
+    // Total Books Number
+    const bookNumber = books.length;
+    const booksNumberShow = document.getElementById('books-number');
+    booksNumberShow.innerText = bookNumber;
+
+    // error text showing
     if (books.length === 0) {
         const div = document.createElement('div')
         div.classList.add('col');
@@ -24,6 +30,7 @@ const displayData = (books) => {
         searchResult.appendChild(div)
     }
 
+    // search result 
     else {
         books.forEach(book => {
             const div = document.createElement('div')

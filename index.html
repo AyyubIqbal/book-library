@@ -12,13 +12,16 @@
 
 <body>
     <h2 class="text-center mx-auto">Search Books</h2>
-
+    <!-- search box and button -->
     <div class="input-group mb-3 w-50 mx-auto">
         <input id="input-box" type="text" class="form-control" placeholder="Search your favourite book"
             aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button onclick="loadData()" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        <button onclick="loadData()" class="btn btn-outline-primary" type="button" id="button-addon2">Button</button>
     </div>
-
+    <!-- Total Books Number -->
+    <h3 class="bg-success text-center text-white w-50 mx-auto">Total Books Number: <span id="books-number">0</span>
+    </h3>
+    <!-- search result  -->
     <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
     </div>
 
